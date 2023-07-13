@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://use.typekit.net/dul8uqn.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html, body {
+  background-color: #DFEFDC;
+}
+
+.brand-overlay {
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.card-shadow {
+  box-shadow: 0px 4px 8px 0px rgba(118, 152, 131, 0.35);
+}
