@@ -144,7 +144,7 @@ const Feed = ({ following, handle, activateBurnerUser }: { following?: Following
         {contributions.map((contribution) => <DonorCard key={`${contribution.id}-${contribution.applicationId}`} image={(followingMap[contribution.voter]?.profile.picture as ProfilePicture)?.original?.url || ""} timestamp={contribution.timestamp} type="row" handle={followingMap[contribution.voter]?.profile.handle}>
           <>
             donated{' '}<TokenAmount address={contribution.token as `0x${string}`} amount={contribution.amount} chainId={contribution.chainId} /> <span className='italic'>({Number(contribution.amountUSD).toFixed(2)} USD)</span> to <span>
-              <a className="font-semibold" href={`https://explorer.gitcoin.co/#/round/1/${contribution.roundId}/${contribution.roundId}-${contribution.applicationId}`} target="_blank" rel="noopener noreferrer">{contribution.projectTitle}</a> on the <a className="font-semibold" href={`https://explorer.gitcoin.co/#/round/1/${contribution.roundId}`} target="_blank" rel="noopener noreferrer">{contribution.roundName}</a>
+              <a className="font-semibold" href={`https://explorer.gitcoin.co/#/round/${contribution.chainId}/${contribution.roundId.toLowerCase()}/${contribution.roundId.toLowerCase()}-${contribution.applicationId}`} target="_blank" rel="noopener noreferrer">{contribution.projectTitle}</a> on the <a className="font-semibold" href={`https://explorer.gitcoin.co/#/round/${contribution.chainId}/${contribution.roundId.toLowerCase()}`} target="_blank" rel="noopener noreferrer">{contribution.roundName}</a>
             </span>
           </>
         </DonorCard>)}
@@ -157,7 +157,7 @@ const Feed = ({ following, handle, activateBurnerUser }: { following?: Following
           {contributions.map((contribution) => <DonorCard key={`${contribution.id}-${contribution.applicationId}`} image={(followingMap[contribution.voter]?.profile.picture as ProfilePicture)?.original?.url || ""} timestamp={contribution.timestamp} type="col" handle={followingMap[contribution.voter].profile.handle}>
             <>
               Donated{' '}<TokenAmount address={contribution.token as `0x${string}`} amount={contribution.amount} chainId={contribution.chainId} /> <span className='italic'>({Number(contribution.amountUSD).toFixed(2)} USD)</span> to <span>
-                <a className="font-semibold" href={`https://explorer.gitcoin.co/#/round/1/${contribution.roundId}/${contribution.roundId}-${contribution.applicationId}`} target="_blank" rel="noopener noreferrer">{contribution.projectTitle}</a> on the <a className="font-semibold" href={`https://explorer.gitcoin.co/#/round/1/${contribution.roundId}`} target="_blank" rel="noopener noreferrer">{contribution.roundName}</a>
+                <a className="font-semibold" href={`https://explorer.gitcoin.co/#/round/${contribution.chainId}/${contribution.roundId.toLowerCase()}/${contribution.roundId.toLowerCase()}-${contribution.applicationId}`} target="_blank" rel="noopener noreferrer">{contribution.projectTitle}</a> on the <a className="font-semibold" href={`https://explorer.gitcoin.co/#/round/${contribution.chainId}/${contribution.roundId.toLowerCase()}`} target="_blank" rel="noopener noreferrer">{contribution.roundName}</a>
               </span>
             </>
           </DonorCard>)}
