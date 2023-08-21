@@ -12,7 +12,7 @@ import { X } from 'lucide-react';
 import Link from 'next/link';
 import Profile from '@/components/ui/profile'
 
-const exampleProfiles = ['stani.lens', 'demiurgeboy.lens', 'zer8_future.lens', 'paris.lens', 'owocki.lens', 'timcopeland.lens']
+const exampleProfiles = ['stani.lens', 'demiurgeboy.lens', 'zer8_future.lens', 'paris.lens', 'owocki.lens', 'timcopeland.lens', 'benwest.lens', 'kweiss.lens', 'nader.lens']
 
 export default function Home() {
   const router = useRouter()
